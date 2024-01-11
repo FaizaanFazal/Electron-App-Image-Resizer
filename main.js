@@ -9,7 +9,7 @@ const isDev = process.env.NODE_ENV !== 'production';
 function createMainWindow() {
     const mainWindow = new BrowserWindow({
         title: "eletron",
-        width: 600,
+        width: isDev? 1200:600,
         height: 600,
     })
     const startUrl = url.format({
